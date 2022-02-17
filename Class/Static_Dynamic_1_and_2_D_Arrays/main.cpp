@@ -43,9 +43,13 @@ int main(int argc, char** argv) {
     fill2D(s2Dary,ROW);
     
     //Output data
+    cout<<"1-D Static Array"<<endl;
     prnt1D(s1Dary,ROW*COL,COL);
+    cout<<"1-D Dynamic Array"<<endl;
     prnt1D(d1Dary,ROW*COL,COL);
+    cout<<"2-D Static Array"<<endl;
     prnt2D(s2Dary,ROW);
+    cout<<"2-D Dynamic Array"<<endl;
     prnt2D(d2Dary,ROW,COL);
     
     //Deallocate memory

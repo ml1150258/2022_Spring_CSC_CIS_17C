@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=LinkList_V3
+PROJECTNAME=MarkSort_Database
 
 # Active Configuration
 DEFAULTCONF=Debug
