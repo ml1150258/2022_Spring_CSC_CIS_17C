@@ -57,6 +57,7 @@ int main(int argc, char** argv) {
     
     //Clean up the code, close files, deallocate memory, etc....
     delete []array;
+    delete []indx;
     
     //Exit stage right
     return 0;
