@@ -42,7 +42,8 @@ void dstrSmp(Simple *s){
 
 void prntSmp(Simple *s,int n){
     for(int i=0;i<n;i++){
-        cout<<s[i].getData()<<endl;
+        //cout<<s[i].getData()<<endl;
+        cout<<(*(s+i)).getData()<<endl;
     }
 }
 
