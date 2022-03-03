@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Review1_CIS17c_ObjectArray
+PROJECTNAME=Review1_CIS17c_ObjectArray_V3_CodeE
 
 # Active Configuration
 DEFAULTCONF=Debug

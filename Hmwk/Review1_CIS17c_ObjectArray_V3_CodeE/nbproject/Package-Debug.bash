@@ -13,9 +13,9 @@ CND_BUILDDIR=build
 CND_DLIB_EXT=dll
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/review1_cis17c_objectarray
-OUTPUT_BASENAME=review1_cis17c_objectarray
-PACKAGE_TOP_DIR=review1cis17cobjectarray/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/review1_cis17c_objectarray_v3_codee
+OUTPUT_BASENAME=review1_cis17c_objectarray_v3_codee
+PACKAGE_TOP_DIR=review1cis17cobjectarrayv3codee/
 
 # Functions
 function checkReturnCode
@@ -60,15 +60,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/review1cis17cobjectarray/bin"
+makeDirectory "${NBTMPDIR}/review1cis17cobjectarrayv3codee/bin"
 copyFileToTmpDir "${OUTPUT_PATH}.exe" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}.exe" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/review1cis17cobjectarray.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/review1cis17cobjectarrayv3codee.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/review1cis17cobjectarray.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/review1cis17cobjectarrayv3codee.tar *
 checkReturnCode
 
 # Cleanup

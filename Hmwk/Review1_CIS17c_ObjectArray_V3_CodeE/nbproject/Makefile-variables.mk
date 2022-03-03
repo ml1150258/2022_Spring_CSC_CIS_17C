@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=Cygwin_1-Windows
 CND_ARTIFACT_DIR_Debug=dist/Debug/Cygwin_1-Windows
-CND_ARTIFACT_NAME_Debug=review1_cis17c_objectarray
-CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_1-Windows/review1_cis17c_objectarray
+CND_ARTIFACT_NAME_Debug=review1_cis17c_objectarray_v3_codee
+CND_ARTIFACT_PATH_Debug=dist/Debug/Cygwin_1-Windows/review1_cis17c_objectarray_v3_codee
 CND_PACKAGE_DIR_Debug=dist/Debug/Cygwin_1-Windows/package
-CND_PACKAGE_NAME_Debug=review1cis17cobjectarray.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_1-Windows/package/review1cis17cobjectarray.tar
+CND_PACKAGE_NAME_Debug=review1cis17cobjectarrayv3codee.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/Cygwin_1-Windows/package/review1cis17cobjectarrayv3codee.tar
 # Release configuration
 CND_PLATFORM_Release=Cygwin_1-Windows
 CND_ARTIFACT_DIR_Release=dist/Release/Cygwin_1-Windows
-CND_ARTIFACT_NAME_Release=review1_cis17c_objectarray
-CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_1-Windows/review1_cis17c_objectarray
+CND_ARTIFACT_NAME_Release=review1_cis17c_objectarray_v3_codee
+CND_ARTIFACT_PATH_Release=dist/Release/Cygwin_1-Windows/review1_cis17c_objectarray_v3_codee
 CND_PACKAGE_DIR_Release=dist/Release/Cygwin_1-Windows/package
-CND_PACKAGE_NAME_Release=review1cis17cobjectarray.tar
-CND_PACKAGE_PATH_Release=dist/Release/Cygwin_1-Windows/package/review1cis17cobjectarray.tar
+CND_PACKAGE_NAME_Release=review1cis17cobjectarrayv3codee.tar
+CND_PACKAGE_PATH_Release=dist/Release/Cygwin_1-Windows/package/review1cis17cobjectarrayv3codee.tar
 #
 # include compiler specific variables
 #

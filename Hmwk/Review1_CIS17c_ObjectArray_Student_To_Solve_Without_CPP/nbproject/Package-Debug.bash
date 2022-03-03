@@ -7,15 +7,15 @@
 # Macros
 TOP=`pwd`
 CND_PLATFORM=Cygwin_1-Windows
-CND_CONF=Release
+CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 CND_DLIB_EXT=dll
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/review1_cis17c_objectarray
-OUTPUT_BASENAME=review1_cis17c_objectarray
-PACKAGE_TOP_DIR=review1cis17cobjectarray/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/review1_cis17c_objectarray_student_to_solve_with_h_cpp
+OUTPUT_BASENAME=review1_cis17c_objectarray_student_to_solve_with_h_cpp
+PACKAGE_TOP_DIR=review1cis17cobjectarraystudenttosolvewithhcpp/
 
 # Functions
 function checkReturnCode
@@ -60,15 +60,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/review1cis17cobjectarray/bin"
+makeDirectory "${NBTMPDIR}/review1cis17cobjectarraystudenttosolvewithhcpp/bin"
 copyFileToTmpDir "${OUTPUT_PATH}.exe" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}.exe" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/review1cis17cobjectarray.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/review1cis17cobjectarraystudenttosolvewithhcpp.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/review1cis17cobjectarray.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/review1cis17cobjectarraystudenttosolvewithhcpp.tar *
 checkReturnCode
 
 # Cleanup

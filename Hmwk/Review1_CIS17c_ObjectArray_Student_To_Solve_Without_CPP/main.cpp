@@ -1,13 +1,11 @@
 /* 
  * File:   main.cpp
  * Author: Dr. Mark E. Lehr
- * Created on January 22nd, 2020, 8:36 PM
+ * Created on Feb 23rd, 2022, 8:36 PM
  * Purpose:  Dynamic Object Arrays
  */
 
 //User Libraries
-#include <cstdlib>
-#include <ctime>
 #include <iostream>
 using namespace std;
 
@@ -28,7 +26,12 @@ int main(int argc, char** argv) {
    srand(static_cast<unsigned int>(time(0)));
    
    //Declare Variables
-   int rows=6,cols=8,perLine=cols/2;
+   int rows,cols,perLine;
+   
+   //Read in Rows and Cols
+   cout<<"Input Rows and Cols"<<endl;
+   cin>>rows>>cols;
+   perLine=cols/2;
    
    //Test out the RowAray
    RowAray row(cols);
@@ -50,7 +53,7 @@ int main(int argc, char** argv) {
    Triangle tri(rows);
    
    //Print the Triangular Table
-   cout<<"The triangular table size is [row,row] = ["<<rows<<","<<rows<<"]";
+   cout<<"The trangular table size is [row,row] = ["<<rows<<","<<rows<<"]";
    prntTri(&tri);
 
    //Exit Stage Right

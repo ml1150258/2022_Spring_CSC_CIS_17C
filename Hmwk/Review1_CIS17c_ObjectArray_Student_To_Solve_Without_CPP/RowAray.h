@@ -1,7 +1,7 @@
 /* 
  * File:   RowAray.h
  * Author: Dr. Mark E. Lehr
- * Created on January 22nd, 2020, 8:36 PM
+ * Created on September 1, 2016, 8:36 PM
  * Specification for the RowAray
  */
 
@@ -12,6 +12,7 @@ class RowAray{
     private:
         int size;
         int *rowData;
+        int mrkRand(int);
     public:
         RowAray(int);
         ~RowAray();
