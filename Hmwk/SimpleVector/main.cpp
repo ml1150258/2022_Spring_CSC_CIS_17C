@@ -21,7 +21,7 @@ void prntVec(SimpleVector<char> &,int);
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Declare Variables
-    char size=100;
+    int size=100;
     SimpleVector<char> sv(size);
     
     //Fill the Vector
