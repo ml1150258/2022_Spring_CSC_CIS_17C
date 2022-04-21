@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Dr. Mark E. Lehr
  * Created on April 21st, 2021, 11:51 AM
- * Purpose: Exponential Sequence
+ * Purpose: Fibonacci Sequence
  */
 
 //System Level Libraries
@@ -17,28 +17,26 @@ using namespace std;  //Library Scope
 //const to follow
 
 //Function Prototypes
-float expRec(float);//Exponential Recursion
-double expRec(double);//Exponential Recursion
+unsigned int fibRec(unsigned int);//Fibonacci Recursion
 
 //Execution Starts Here
 int main(int argc, char** argv){
     //Set Random Number Seed Here
     
     //Declare Variables - Known and Unknown, units, range, description
-    double dx=5.0;
-    float fx=dx;
-    
+    unsigned int nLoop;
     
     //Initialize Variables
+    nLoop=47;
     
     //Map inputs to outputs -> i.e. process the inputs
-    cout<<"Exponential Sequence"<<endl;
+    cout<<"Fibonacci Sequence Timing"<<endl;
     
     //Display the outputs
-    cout<<"e^"<<fx<<" Recursive float  -> "<<expRec(fx)<<endl;
-    cout<<"e^"<<dx<<" Recursive double -> "<<expRec(dx)<<endl;
-    cout<<"e^"<<fx<<" Math Lib         -> "<<exp(fx)<<endl;
-
+    int beg=time(0);
+    unsigned int fn=fibRec(nLoop);
+    int end=time(0);
+    cout<<"Fib("<<nLoop<<")="<<fn<<" took "<<end-beg<<" secs"<<endl;
     
     //Clean up - File closing, memory deallocation, etc....
 
@@ -47,20 +45,11 @@ int main(int argc, char** argv){
 }
 
 //Function Implementations
-double expRec(double x){
-    //Base Case
-    double tol=1e-9f;//Tolerance of 6 decimal, small x approximation
-    if(abs(x)<tol)return 1+x;
-    //Recursive Representation
-    double a=expRec(x/2);
-    return a*a;
-}
 
-float expRec(float x){
+unsigned int fibRec(unsigned int n){
     //Base Case
-    float tol=1.0e-6f;//Tolerance of 6 decimal, small x approximation
-    if(abs(x)<tol)return 1+x;
+    if(n<=0)return 0;
+    if(n==1)return 1;
     //Recursive Representation
-    float a=expRec(x/2);
-    return a*a;
+    return fibRec(n-1)+fibRec(n-2);
 }

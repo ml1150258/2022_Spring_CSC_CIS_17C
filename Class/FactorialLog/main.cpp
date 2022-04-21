@@ -55,8 +55,9 @@ int fact(int n){
 void fact(int n,int &pwr10,float &frac10){
     double sumLog=0;
     for(int i=1;i<=n;i++){
-        sumLog+=log(i)/log(10);//Natural converted to Base 10
+        sumLog+=log(i);//Natural Log
     }
-    pwr10=sumLog;
+    sumLog/=log(10);//Convert to Base 10
+    pwr10=sumLog;//Take the integer as the power of 10
     frac10=pow(10,sumLog-pwr10);
 }

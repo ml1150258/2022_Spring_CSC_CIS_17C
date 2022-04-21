@@ -1,8 +1,8 @@
 /* 
  * File:   main.cpp
  * Author: Dr. Mark E. Lehr
- * Created on April 6th, 2022, 8:25 PM
- * Purpose:  Retirement Recursion
+ * Created on April 6th, 2022, 7:55 PM
+ * Purpose:  Savings Recursion
  */
 
 //System Libraries
@@ -15,42 +15,34 @@ using namespace std;  //STD Name-space where Library is compiled
 //Math/Physics/Science/Conversions/Dimensions
 
 //Function Prototypes
-float recRetire(float,float,float,int);//Recursive Retirement
-float forRetire(float,float,float,int);//For-Loops
-float closfrm(float,float,float,int);//Closed Form Solution
-float recPwr(float,unsigned int);//Recursive Power
+float recSave(float,float,int);//Recursive Savings
+float savings(float,float,int);//For-Loops
+float closfrm(float,float,int);//Closed Form Solution
+float recPwr(float,unsigned int);
 
 //Code Begins Execution Here with function main
 int main(int argc, char** argv) {
     //Declare variables here
     float pv,//Present Value in $'s
      intRate,//Interest Rate %
-    depPrcnt,//Percent of Salary used for Regular Retirement Deposit
-     deposit,//Regular Deposit $'s;
-      salary,//Yearly Salary $'s
           fv;//Future Value
     int numCmpd;//Number of compounding periods
     
     //Initialize variables here
-    pv=0;//$0
+    pv=100;//$100
     intRate=0.06f;//6%
-    numCmpd=34;
-    salary=115000.0f;//$115k
-    depPrcnt=0.166f;//16.6%
-    deposit=salary*depPrcnt;//Yearly deposit
+    numCmpd=12;//Using rule of 72 72/i=n
     
     //Map inputs to outputs here, i.e. the process
     cout<<"Recursion  Solution fv("<<pv<<","<<intRate<<
-            ","<<numCmpd<<")=$"
-            <<recRetire(pv,intRate,deposit,numCmpd)<<endl;
-    cout<<"For-Loop   Solution fv("<<pv<<","<<intRate<<
-            ","<<numCmpd<<")=$"
-            <<forRetire(pv,intRate,deposit,numCmpd)<<endl;
-    cout<<"Closed Frm Solution fv("<<pv<<","<<intRate<<
-            ","<<numCmpd<<")=$"
-            <<closfrm(pv,intRate,deposit,numCmpd)
+            ","<<numCmpd<<")=$"<<recSave(pv,intRate,numCmpd)
             <<endl;
-    cout<<"Savings needed to retire = $"<<salary/intRate<<endl;
+    cout<<"For-Loop   Solution fv("<<pv<<","<<intRate<<
+            ","<<numCmpd<<")=$"<<savings(pv,intRate,numCmpd)
+            <<endl;
+    cout<<"Closed Frm Solution fv("<<pv<<","<<intRate<<
+            ","<<numCmpd<<")=$"<<closfrm(pv,intRate,numCmpd)
+            <<endl;
     
     //Display the results
 
@@ -65,26 +57,24 @@ float recPwr(float x,unsigned int n){
     return recPwr(x,n-1)*x;
 }
 
-float closfrm(float pv,float i,float d,int n){
-    if(i==0)return pv+n*d;
-    float cton=recPwr(1+i,n);
-    return cton*pv+d/i*(cton-1);
+float closfrm(float pv,float i,int n){
+    float c=(1+i);
+    return pv*recPwr(c,n);
 }
 
-float forRetire(float pv,float i,float d,int n){
+float savings(float pv,float i,int n){
     float c=(1+i);
     float fv=pv;
     for(int j=1;j<=n;j++){
         fv*=c;
-        fv+=d;
     }
     return fv;
 }
 
-float recRetire(float pv,float i,float d,int n){
+float recSave(float pv,float i,int n){
     //Base Case
     if(n<=0)return pv;
     //Recursion
     float c=(1+i);
-    return c*recRetire(pv,i,d,n-1)+d;
+    return c*recSave(pv,i,n-1);
 }

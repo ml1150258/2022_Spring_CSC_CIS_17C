@@ -29,7 +29,7 @@ int main(int argc, char** argv){
     int nLoop;
     
     //Initialize Variables
-    nLoop=45;
+    nLoop=44;
     
     //Map inputs to outputs -> i.e. process the inputs
     cout<<"Fibonacci Sequence"<<endl;
@@ -78,9 +78,9 @@ int fibLoop(int n){
     if(n==1)return 1;
     int fim1=1,fim2=0,fi=fim1+fim2;
     for(int i=2;i<n;i++){
-        fim2=fim1;
-        fim1=fi;
-        fi=fim1+fim2;  
+        fim2=fim1;//Swap 2 with 1
+        fim1=fi; //Swap 1 with calculated
+        fi=fim1+fim2;  //Calculating the new value
     }
     return fi;
 }
